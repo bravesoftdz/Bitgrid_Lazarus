@@ -1,0 +1,140 @@
+object Form1: TForm1
+  Left = 191
+  Height = 478
+  Top = 99
+  Width = 915
+  ClientHeight = 478
+  ClientWidth = 915
+  LCLVersion = '1.0.14.0'
+  object Button1: TButton
+    Left = 568
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Phase A'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 656
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Phase B'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Memo1: TMemo
+    Left = 24
+    Height = 409
+    Top = 8
+    Width = 520
+    Lines.Strings = (
+      'Memo1'
+    )
+    ScrollBars = ssBoth
+    TabOrder = 2
+  end
+  object Memo2: TMemo
+    Left = 568
+    Height = 209
+    Top = 121
+    Width = 329
+    Lines.Strings = (
+      'Memo2'
+    )
+    OnExit = Memo2Exit
+    ScrollBars = ssBoth
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 568
+    Height = 25
+    Top = 360
+    Width = 75
+    Caption = 'To Memo'
+    OnClick = Button3Click
+    TabOrder = 4
+  end
+  object Button4: TButton
+    Left = 672
+    Height = 25
+    Top = 360
+    Width = 75
+    Caption = 'FROM Memo'
+    OnClick = Button4Click
+    TabOrder = 5
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 455
+    Width = 915
+    Panels = <    
+      item
+        Width = 100
+      end    
+      item
+        Width = 180
+      end    
+      item
+        Alignment = taRightJustify
+        Width = 0
+      end>
+  end
+  object MainMenu1: TMainMenu
+    left = 8
+    top = 32
+    object File1: TMenuItem
+      Caption = '&File'
+      object Open1: TMenuItem
+        Caption = '&Open'
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Save1: TMenuItem
+        Caption = '&Save'
+      end
+      object SaveAs1: TMenuItem
+        Caption = 'Save &As'
+        OnClick = SaveAs1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object Exit1: TMenuItem
+        Caption = 'E&xit'
+        OnClick = Exit1Click
+      end
+    end
+    object ools1: TMenuItem
+      Caption = '&Tools'
+      object Run1: TMenuItem
+        Caption = '&Run'
+        OnClick = Run1Click
+      end
+    end
+    object Help1: TMenuItem
+      Caption = '&Help'
+      object AboutBitGrid1: TMenuItem
+        Caption = '&About BitGrid'
+        OnClick = AboutBitGrid1Click
+      end
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    left = 816
+    top = 360
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.bitgrid'
+    FileName = 'default'
+    Filter = '*.bitgrid'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    left = 8
+    top = 88
+  end
+end
